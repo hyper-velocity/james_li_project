@@ -1,10 +1,10 @@
 import { NavLink, LinkProps } from 'react-router-dom';
 
-type MainTabProps = {
+type CommonTabProps = {
   label: string
 }
 
-export const MainTab: React.FC<LinkProps & MainTabProps> = ({ label, to }) => (
+export const CommonTab: React.FC<LinkProps & CommonTabProps> = ({ label, to }) => (
   <NavLink
     className={ ({ isActive }) =>
       [
