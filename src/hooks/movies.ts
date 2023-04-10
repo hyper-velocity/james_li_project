@@ -1,12 +1,13 @@
 import apis from "@/apis"
 import { useCollection } from "./collection"
+import { Movie } from "@/types/movie"
 
 export const useMovies = () => {
   const {
     loading,
     list: movies,
     fetchList: fetchMovies
-  } = useCollection(apis.Movies.all)
+  } = useCollection<Movie>(apis.Movies.all)
 
   return {
     movies,

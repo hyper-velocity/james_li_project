@@ -18,7 +18,7 @@ export const MainFrame: React.FC<MainFrameProps> = ({ children }) => (
       <MainTab label='Characters' to="/characters" />
       <MainTab label='Quotes' to="/quotes" />
     </div>
-    <div className="bg-slate-700 p-4">
+    <div className="bg-slate-700 rounded-lg rounded-tl-none p-4">
       {children}
     </div>
   </>

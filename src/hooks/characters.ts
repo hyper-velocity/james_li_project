@@ -1,12 +1,13 @@
 import apis from "@/apis"
 import { useCollection } from "./collection"
+import { Character } from "@/types/character"
 
 export const useCharacters = () => {
   const {
     loading,
     list: characters,
     fetchList: fetchCharacters
-  } = useCollection(apis.Characters.all)
+  } = useCollection<Character>(apis.Characters.all)
 
   return {
     characters,

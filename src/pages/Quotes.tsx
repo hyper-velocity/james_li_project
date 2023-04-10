@@ -1,21 +1,21 @@
 import { useEffect } from "react";
-import { useMovies } from "@/hooks/movies";
+import { useQuotes } from "@/hooks/quotes";
 import { MainFrame } from "@/components/main/frame";
-import { MovieList } from "@/components/movie/list";
+import { QuoteList } from "@/components/quote/list";
 
 export default () => {
-  const { movies, loading, fetchMovies } = useMovies()
+  const { quotes, loading, fetchQuotes } = useQuotes()
 
   useEffect(() => {
-    fetchMovies();
+    fetchQuotes();
   }, [])
 
   return (
     <div className="px-4 sm:px-8 py-6 sm:py-12">
       <MainFrame>
-        {!movies.length && loading
+        {!quotes.length && loading
           ? <div>Loading...</div>
-          : <MovieList movies={movies} loading={loading} />}
+          : <QuoteList quotes={quotes} loading={loading} />}
       </MainFrame>
     </div>
   )
