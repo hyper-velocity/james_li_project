@@ -1,5 +1,9 @@
 import { api } from './api';
+import { PaginationRequest, TheOneApiResponse } from '@/types';
+import { Quote } from '@/types/quote';
 
 export default {
-  all: () => api.get('/quote').then(({ data }) => data.docs)
+  all: (pagination: PaginationRequest = {}) =>
+    api.get('/quote', { params: pagination })
+    .then(({ data }) => data as TheOneApiResponse<Quote>)
 }

@@ -6,12 +6,14 @@ export const useMovies = () => {
   const {
     loading,
     list: movies,
-    fetchList: fetchMovies
+    fetchList: fetchMovies,
+    ...restApi
   } = useCollection<Movie>(apis.Movies.all)
 
   return {
     movies,
     loading,
-    fetchMovies
+    fetchMovies,
+    ...restApi
   }
 }

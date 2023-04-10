@@ -6,12 +6,14 @@ export const useCharacters = () => {
   const {
     loading,
     list: characters,
-    fetchList: fetchCharacters
-  } = useCollection<Character>(apis.Characters.all)
+    fetchList: fetchCharacters,
+    ...restApi
+  } = useCollection<Character>(apis.Characters.all, 12)
 
   return {
     characters,
     loading,
-    fetchCharacters
+    fetchCharacters,
+    ...restApi
   }
 }

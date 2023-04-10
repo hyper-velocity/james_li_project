@@ -6,12 +6,14 @@ export const useQuotes = () => {
   const {
     loading,
     list: quotes,
-    fetchList: fetchQuotes
+    fetchList: fetchQuotes,
+    ...restApi
   } = useCollection<Quote>(apis.Quotes.all)
 
   return {
     quotes,
     loading,
-    fetchQuotes
+    fetchQuotes,
+    ...restApi
   }
 }

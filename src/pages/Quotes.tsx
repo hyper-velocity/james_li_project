@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useQuotes } from '@/hooks/quotes';
-import { MainFrame } from '@/components/main/frame';
+import { CommonFrame } from '@/components/common/frame';
 import { QuoteList } from '@/components/quote/list';
 
 export default () => {
@@ -12,11 +12,11 @@ export default () => {
 
   return (
     <div className='px-4 sm:px-8 py-6 sm:py-12'>
-      <MainFrame>
+      <CommonFrame>
         {!quotes.length && loading
           ? <div>Loading...</div>
           : <QuoteList quotes={quotes} loading={loading} />}
-      </MainFrame>
+      </CommonFrame>
     </div>
   )
 }

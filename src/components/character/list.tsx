@@ -12,7 +12,11 @@ export const CharacterList: React.FC<React.HTMLAttributes<HTMLDivElement> & Char
     {!characters?.length && loading
       ? <div>Loading...</div>
       : characters
-        ? characters.map((character) => <CharacterListItem key={character._id} character={character} />)
+        ? (
+          <div className="flex flex-wrap items-stretch">
+            {characters.map((character) => <CharacterListItem key={character._id} character={character} />)}
+          </div>
+        )
         : <div>No Character Found</div>}
     </>
   )

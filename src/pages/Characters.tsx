@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useCharacters } from '@/hooks/characters';
-import { MainFrame } from '@/components/main/frame';
+import { CommonFrame } from '@/components/common/frame';
 import { CharacterList } from '@/components/character/list';
 
 export default () => {
@@ -12,11 +12,11 @@ export default () => {
 
   return (
     <div className='px-4 sm:px-8 py-6 sm:py-12'>
-      <MainFrame>
+      <CommonFrame>
         {!characters.length && loading
           ? <div>Loading...</div>
           : <CharacterList characters={characters} loading={loading} />}
-      </MainFrame>
+      </CommonFrame>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useMovies } from '@/hooks/movies';
-import { MainFrame } from '@/components/main/frame';
+import { CommonFrame } from '@/components/common/frame';
 import { MovieList } from '@/components/movie/list';
 
 export default () => {
@@ -12,11 +12,11 @@ export default () => {
 
   return (
     <div className='px-4 sm:px-8 py-6 sm:py-12'>
-      <MainFrame>
+      <CommonFrame>
         {!movies.length && loading
           ? <div>Loading...</div>
           : <MovieList movies={movies} loading={loading} />}
-      </MainFrame>
+      </CommonFrame>
     </div>
   )
 }
