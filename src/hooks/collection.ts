@@ -4,25 +4,26 @@ import { PaginationRequest, TheOneApiResponse } from '@/types'
 
 export const useCollection = <DataType>(
   fetchFunc: (req: PaginationRequest) => Promise<TheOneApiResponse<DataType>>,
-  paginationSize = 10
+  paginationSize = 10,
 ) => {
   const paginationApi = usePagination(paginationSize)
 
-  const [list, setList] = useState([] as DataType[])
-  const [loading, setLoading] = useState(false)
-  const { setTotal } = paginationApi
+  const [list, setList] = useState([] as DataType[]);
+  const [loading, setLoading] = useState(false);
+  const { setTotal } = paginationApi;
 
   const fetchList = async () => {
-    setLoading(true)
+    setLoading(true);
+
     try {
       const res = await fetchFunc({
         limit: paginationApi.pagination.size,
         page: paginationApi.pagination.current + 1
-      })
-      setList(res.docs)
-      setTotal(res.total)
+      });
+      setList(res.docs);
+      setTotal(res.total);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
 
@@ -30,6 +31,6 @@ export const useCollection = <DataType>(
     ...paginationApi,
     list,
     loading,
-    fetchList
+    fetchList,
   }
 }

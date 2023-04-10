@@ -2,7 +2,7 @@ import StarRatings from 'react-star-ratings'
 import { Movie } from '@/types/movie'
 
 type MovieListItemProps = {
-  movie: Movie
+  movie: Movie;
 }
 
 export const MovieListItem: React.FC<MovieListItemProps> = ({ movie }) => {
@@ -26,5 +26,5 @@ export const MovieListItem: React.FC<MovieListItemProps> = ({ movie }) => {
         </div>
       </div>
     </div>
-  )
+  );
 }

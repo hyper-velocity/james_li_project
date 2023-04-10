@@ -5,5 +5,5 @@ import Quotes from './quotes'
 export default {
   Characters,
   Movies,
-  Quotes
+  Quotes,
 }

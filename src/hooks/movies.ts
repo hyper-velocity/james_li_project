@@ -8,12 +8,12 @@ export const useMovies = () => {
     list: movies,
     fetchList: fetchMovies,
     ...restApi
-  } = useCollection<Movie>(apis.Movies.all)
+  } = useCollection<Movie>(apis.Movies.all);
 
   return {
     movies,
     loading,
     fetchMovies,
-    ...restApi
-  }
+    ...restApi,
+  };
 }

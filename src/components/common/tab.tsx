@@ -1,7 +1,7 @@
 import { NavLink, LinkProps } from 'react-router-dom';
 
 type CommonTabProps = {
-  label: string
+  label: string;
 }
 
 export const CommonTab: React.FC<LinkProps & CommonTabProps> = ({ label, to }) => (

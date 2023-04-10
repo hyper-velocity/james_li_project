@@ -8,12 +8,12 @@ export const useQuotes = () => {
     list: quotes,
     fetchList: fetchQuotes,
     ...restApi
-  } = useCollection<Quote>(apis.Quotes.all)
+  } = useCollection<Quote>(apis.Quotes.all);
 
   return {
     quotes,
     loading,
     fetchQuotes,
-    ...restApi
-  }
+    ...restApi,
+  };
 }

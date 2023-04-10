@@ -11,12 +11,12 @@ export default () => {
     fetchCharacters,
     pagination,
     nextPage,
-    prevPage
-  } = useCharacters()
+    prevPage,
+  } = useCharacters();
 
   useEffect(() => {
     fetchCharacters();
-  }, [pagination.current])
+  }, [pagination.current]);
 
   return (
     <div className='px-4 sm:px-8 py-6 sm:py-12'>
@@ -26,7 +26,7 @@ export default () => {
             ? <div>Loading...</div>
             : (
               <>
-                <div className="flex justify-end text-orange-300 mb-4">
+                <div className='flex justify-end text-orange-300 mb-4'>
                   <CommonPagination pagination={pagination} nextPage={nextPage} prevPage={prevPage} />
                 </div>
                 <CharacterList characters={characters} loading={loading} />
@@ -35,5 +35,5 @@ export default () => {
         }
       </CommonFrame>
     </div>
-  )
+  );
 }

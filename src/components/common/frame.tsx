@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { CommonTab } from './tab'
 
 type CommonFrameProps = {
-  children?: string | JSX.Element | JSX.Element[]
+  children?: string | JSX.Element | JSX.Element[];
 }
 
 export const CommonFrame: React.FC<CommonFrameProps> = ({ children }) => (
@@ -22,4 +22,4 @@ export const CommonFrame: React.FC<CommonFrameProps> = ({ children }) => (
       {children}
     </div>
   </>
-)
+);

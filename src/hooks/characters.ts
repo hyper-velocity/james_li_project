@@ -8,12 +8,12 @@ export const useCharacters = () => {
     list: characters,
     fetchList: fetchCharacters,
     ...restApi
-  } = useCollection<Character>(apis.Characters.all, 12)
+  } = useCollection<Character>(apis.Characters.all, 12);
 
   return {
     characters,
     loading,
     fetchCharacters,
-    ...restApi
-  }
+    ...restApi,
+  };
 }
