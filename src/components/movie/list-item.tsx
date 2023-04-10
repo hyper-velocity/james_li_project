@@ -1,3 +1,4 @@
+import StarRatings from 'react-star-ratings'
 import { Movie } from "@/types/movie"
 
 type MovieListItemProps = {
@@ -6,9 +7,23 @@ type MovieListItemProps = {
 
 export const MovieListItem: React.FC<MovieListItemProps> = ({ movie }) => {
   return (
-    <div className="border-2 border-slate-600 rounded-lg mb-4 last:mb-0">
-      <div className="w-full p-3">
+    <div className="border-2 border-slate-600 hover:bg-white/10 rounded-lg cursor-pointer mb-4 last:mb-0">
+      <div className="p-3">
         {movie.name}
+      </div>
+      <div className="max-w-md flex items-center justify-between">
+        <div className="w-32 text-xs p-3">
+          {movie.runtimeInMinutes} mins
+        </div>
+        <div className="w-50 text-xs p-3">
+          <StarRatings
+            rating={movie.rottenTomatoesScore / 20}
+            starRatedColor="orange"
+            numberOfStars={5}
+            starDimension="20px"
+            starSpacing="5px"
+          />
+        </div>
       </div>
     </div>
   )
