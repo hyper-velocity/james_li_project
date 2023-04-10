@@ -1,29 +1,44 @@
 import { useMemo, useState } from "react"
+import { Pagination } from "@/types"
 
-export const usePagination = (size?: number) => {
-  const [pagination, setPagination] = useState({
-    current: 0,
-    total: 0,
-    size: size || 0
-  })
-
+export const usePaginationData = (pagination: Pagination) => {
   const pageCount = useMemo(
     () => Math.ceil(pagination.total / pagination.size),
     [pagination.total, pagination.size]
   )
 
   const hasNextPage = useMemo(
-    () => pagination.current >= pageCount,
+    () => pagination.current < pageCount - 1,
     [pagination.current, pageCount]
   )
 
   const hasPrevPage = useMemo(
-    () => pagination.current <= 0,
+    () => pagination.current > 0,
     [pagination.current]
   )
 
+  return {
+    pageCount,
+    hasNextPage,
+    hasPrevPage
+  }
+}
+
+export const usePagination = (size?: number) => {
+  const [pagination, setPagination] = useState<Pagination>({
+    current: 0,
+    total: 0,
+    size: size || 0
+  })
+
+  const {
+    pageCount,
+    hasNextPage,
+    hasPrevPage
+  } = usePaginationData(pagination)
+
   const nextPage = () => {
-    if (pagination.current >= pageCount) { return; }
+    if (!hasNextPage) { return; }
 
     setPagination({
       ...pagination,
@@ -32,7 +47,7 @@ export const usePagination = (size?: number) => {
   }
 
   const prevPage = () => {
-    if (pagination.current <= 0) { return; }
+    if (!hasPrevPage) { return; }
 
     setPagination({
       ...pagination,

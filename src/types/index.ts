@@ -1,3 +1,9 @@
+export type Pagination = {
+  current: number;
+  total: number;
+  size: number;
+}
+
 export type PaginationRequest = {
   page?: number,
   limit?: number
