@@ -10,6 +10,14 @@ export const CharacterListItem: React.FC<CharacterListItemProps> = ({ character 
       <div className="w-full p-3">
         {character.name}
       </div>
+      <div className="max-w-md flex items-center justify-between text-xs">
+        <div className="w-32 p-3">
+          {character.race}
+        </div>
+        <div className="w-32 p-3">
+          {character.gender}
+        </div>
+      </div>
     </div>
   )
 }

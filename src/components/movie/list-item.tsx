@@ -11,11 +11,11 @@ export const MovieListItem: React.FC<MovieListItemProps> = ({ movie }) => {
       <div className="p-3">
         {movie.name}
       </div>
-      <div className="max-w-md flex items-center justify-between">
-        <div className="w-32 text-xs p-3">
+      <div className="max-w-md flex items-center justify-between text-xs">
+        <div className="w-32 p-3">
           {movie.runtimeInMinutes} mins
         </div>
-        <div className="w-50 text-xs p-3">
+        <div className="w-50 p-3">
           <StarRatings
             rating={movie.rottenTomatoesScore / 20}
             starRatedColor="orange"
