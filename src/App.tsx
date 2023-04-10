@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { RouterProvider } from 'react-router-dom'
+import { routes } from './router'
 
 function App() {
   return (
     <div className="App">
-      Hello World
+      <RouterProvider router={routes} fallbackElement={<p>Loading...</p>} />
     </div>
   )
 }
