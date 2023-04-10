@@ -38,7 +38,9 @@ You can see the tabs on the top that can take you to Movies, Characters and Quot
 
 ## Additionally
 
-I used `React` with `TypeScript`, `Vite` and `TailwindCSS`
-I used `Axios` for API calls and `react-star-ratings` library for showing rating info on Movies page.
+- I used `React` with `TypeScript`, `Vite` and `TailwindCSS`
+- I used `Axios` for API calls
+- I used API factory pattern for API calls
+- `react-star-ratings` library for showing rating info on Movies page
 
 I didn't install `ESLint` and use it, to show you coding practices without automated tools.
