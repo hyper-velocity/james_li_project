@@ -1,5 +1,5 @@
-import { QuoteListItem } from "./list-item"
-import { Quote } from "@/types/quote"
+import { QuoteListItem } from './list-item'
+import { Quote } from '@/types/quote'
 
 type QuoteListProps = {
   quotes?: Quote[],

@@ -1,6 +1,6 @@
-import apis from "@/apis"
-import { useCollection } from "./collection"
-import { Quote } from "@/types/quote"
+import apis from '@/apis'
+import { useCollection } from './collection'
+import { Quote } from '@/types/quote'
 
 export const useQuotes = () => {
   const {

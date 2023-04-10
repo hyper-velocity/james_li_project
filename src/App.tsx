@@ -3,7 +3,7 @@ import { routes } from './router'
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <RouterProvider router={routes} fallbackElement={<p>Loading...</p>} />
     </div>
   )

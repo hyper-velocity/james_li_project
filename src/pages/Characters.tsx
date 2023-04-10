@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import { useCharacters } from "@/hooks/characters";
-import { MainFrame } from "@/components/main/frame";
-import { CharacterList } from "@/components/character/list";
+import { useEffect } from 'react';
+import { useCharacters } from '@/hooks/characters';
+import { MainFrame } from '@/components/main/frame';
+import { CharacterList } from '@/components/character/list';
 
 export default () => {
   const { characters, loading, fetchCharacters } = useCharacters()
@@ -11,7 +11,7 @@ export default () => {
   }, [])
 
   return (
-    <div className="px-4 sm:px-8 py-6 sm:py-12">
+    <div className='px-4 sm:px-8 py-6 sm:py-12'>
       <MainFrame>
         {!characters.length && loading
           ? <div>Loading...</div>

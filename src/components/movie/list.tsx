@@ -1,5 +1,5 @@
-import { MovieListItem } from "./list-item"
-import { Movie } from "@/types/movie"
+import { MovieListItem } from './list-item'
+import { Movie } from '@/types/movie'
 
 type MovieListProps = {
   movies?: Movie[],

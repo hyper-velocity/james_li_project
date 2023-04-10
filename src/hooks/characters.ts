@@ -1,6 +1,6 @@
-import apis from "@/apis"
-import { useCollection } from "./collection"
-import { Character } from "@/types/character"
+import apis from '@/apis'
+import { useCollection } from './collection'
+import { Character } from '@/types/character'
 
 export const useCharacters = () => {
   const {

@@ -1,5 +1,5 @@
-import { CharacterListItem } from "./list-item"
-import { Character } from "@/types/character"
+import { CharacterListItem } from './list-item'
+import { Character } from '@/types/character'
 
 type CharacterListProps = {
   characters?: Character[],

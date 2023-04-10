@@ -1,4 +1,4 @@
-import { NavLink, LinkProps } from "react-router-dom";
+import { NavLink, LinkProps } from 'react-router-dom';
 
 type MainTabProps = {
   label: string

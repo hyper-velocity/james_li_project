@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom"
-import { MainTab } from "./tab"
+import { NavLink } from 'react-router-dom'
+import { MainTab } from './tab'
 
 type MainFrameProps = {
   children?: string | JSX.Element | JSX.Element[]
@@ -14,11 +14,11 @@ export const MainFrame: React.FC<MainFrameProps> = ({ children }) => (
     </div>
 
     <div className='flex align-center'>
-      <MainTab label='Movies' to="/movies" />
-      <MainTab label='Characters' to="/characters" />
-      <MainTab label='Quotes' to="/quotes" />
+      <MainTab label='Movies' to='/movies' />
+      <MainTab label='Characters' to='/characters' />
+      <MainTab label='Quotes' to='/quotes' />
     </div>
-    <div className="bg-slate-700 rounded-lg rounded-tl-none p-4">
+    <div className='bg-slate-700 rounded-lg rounded-tl-none p-4'>
       {children}
     </div>
   </>

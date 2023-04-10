@@ -1,6 +1,6 @@
-import apis from "@/apis"
-import { useCollection } from "./collection"
-import { Movie } from "@/types/movie"
+import apis from '@/apis'
+import { useCollection } from './collection'
+import { Movie } from '@/types/movie'
 
 export const useMovies = () => {
   const {
